@@ -6,6 +6,11 @@ import (
 )
 
 func home(w http.ResponseWriter, req *http.Request) {
+	if req.URL.Path != "/" {
+		http.NotFound(w, req)
+		return
+	}
+
 	w.Write([]byte("testing..."))
 }
 
