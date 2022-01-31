@@ -19,6 +19,14 @@ func showSnippet(w http.ResponseWriter, req *http.Request) {
 }
 
 func createSnippet(w http.ResponseWriter, req *http.Request) {
+
+	if req.Method != http.MethodPost {
+
+		w.WriteHeader(405)
+		w.Write([]byte("GET method is forbidden!"))
+		return
+	}
+
 	w.Write([]byte("Create snippet"))
 }
 
