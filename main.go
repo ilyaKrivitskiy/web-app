@@ -30,5 +30,5 @@ func main() {
 
 	log.Println("Start server on http://127.0.0.1:4000")
 	errorOfServer := http.ListenAndServe(":4000", mux)
-	log.Println(errorOfServer)
+	log.Fatal(errorOfServer)
 }
