@@ -27,7 +27,7 @@ func home(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, "Internal Server Error", 500)
 	}
 
-	w.Write([]byte("testing..."))
+	//w.Write([]byte("testing..."))
 }
 
 func showSnippet(w http.ResponseWriter, req *http.Request) {
